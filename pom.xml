@@ -18,7 +18,7 @@
   <groupId>com.likeness.components</groupId>
   <artifactId>likeness-lifecycle</artifactId>
   <name>likeness-lifecycle</name>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <packaging>jar</packaging>
   <description>Guice based lifecycle.</description>
 
