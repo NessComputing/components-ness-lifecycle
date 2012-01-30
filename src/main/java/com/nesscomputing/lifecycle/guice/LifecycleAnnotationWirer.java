@@ -13,16 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.likeness.lifecycle.guice;
+package com.nesscomputing.lifecycle.guice;
+
+import com.google.inject.Inject;
+import com.nesscomputing.lifecycle.Lifecycle;
+
 
 /**
- * Provides a callback to perform an action on a given object. This is 
- * necessary to hook the LifecycledProvider up using a specific instance of an object.
+ * Once the Lifecycle is available, present it to the {@link LifecycleAnnotationFinder}
  */
-public interface LifecycleAction<T>
-{
-    /**
-     * Perform an arbitrary action on the object passed in. 
-     */
-    void performAction(T obj);
+class LifecycleAnnotationWirer {
+    @Inject
+    LifecycleAnnotationWirer(Lifecycle lifecycle, LifecycleAnnotationFinder finder) {
+        finder.lifecycleAvailable(lifecycle);
+    }
 }

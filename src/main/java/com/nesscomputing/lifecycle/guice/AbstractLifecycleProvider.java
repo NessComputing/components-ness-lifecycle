@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.likeness.lifecycle.guice;
+package com.nesscomputing.lifecycle.guice;
 
 
 import java.util.ArrayList;
@@ -25,9 +25,9 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
-import com.likeness.lifecycle.Lifecycle;
-import com.likeness.lifecycle.LifecycleListener;
-import com.likeness.lifecycle.LifecycleStage;
+import com.nesscomputing.lifecycle.Lifecycle;
+import com.nesscomputing.lifecycle.LifecycleListener;
+import com.nesscomputing.lifecycle.LifecycleStage;
 
 /**
  * Base class for providers that want to hook the objects they provide into the Lifecyle. Any class extending this base class

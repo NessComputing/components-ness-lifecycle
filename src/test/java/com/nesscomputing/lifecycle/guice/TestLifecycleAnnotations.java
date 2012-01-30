@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.likeness.lifecycle.guice;
+package com.nesscomputing.lifecycle.guice;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -28,10 +28,10 @@ import com.google.inject.Guice;
 import com.google.inject.Inject;
 import com.google.inject.Injector;
 import com.google.inject.ProvisionException;
-import com.likeness.lifecycle.Lifecycle;
-import com.likeness.lifecycle.LifecycleStage;
-import com.likeness.lifecycle.guice.LifecycleModule;
-import com.likeness.lifecycle.guice.OnStage;
+import com.nesscomputing.lifecycle.Lifecycle;
+import com.nesscomputing.lifecycle.LifecycleStage;
+import com.nesscomputing.lifecycle.guice.LifecycleModule;
+import com.nesscomputing.lifecycle.guice.OnStage;
 
 public class TestLifecycleAnnotations {
 

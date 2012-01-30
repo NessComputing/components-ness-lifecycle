@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.likeness.lifecycle;
+package com.nesscomputing.lifecycle;
 
 /**
  * Provides a lifecycle that can be run inside an IoC container such as guice.

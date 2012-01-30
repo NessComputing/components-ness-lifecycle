@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.likeness.lifecycle.guice;
+package com.nesscomputing.lifecycle.guice;
 
 
 import java.lang.annotation.ElementType;
@@ -22,7 +22,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 import com.google.inject.Singleton;
-import com.likeness.lifecycle.Lifecycle;
+import com.nesscomputing.lifecycle.Lifecycle;
 
 /**
  * Annotate a method to be hooked up to a certain lifecycle stage.

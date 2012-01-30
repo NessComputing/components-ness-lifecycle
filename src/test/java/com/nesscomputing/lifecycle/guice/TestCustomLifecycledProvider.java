@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.likeness.lifecycle.guice;
+package com.nesscomputing.lifecycle.guice;
 
 
 import java.util.Map;
@@ -24,11 +24,11 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import com.google.common.collect.Maps;
-import com.likeness.lifecycle.DefaultLifecycle;
-import com.likeness.lifecycle.Lifecycle;
-import com.likeness.lifecycle.LifecycleStage;
-import com.likeness.lifecycle.guice.AbstractLifecycleProvider;
-import com.likeness.lifecycle.guice.LifecycleAction;
+import com.nesscomputing.lifecycle.DefaultLifecycle;
+import com.nesscomputing.lifecycle.Lifecycle;
+import com.nesscomputing.lifecycle.LifecycleStage;
+import com.nesscomputing.lifecycle.guice.AbstractLifecycleProvider;
+import com.nesscomputing.lifecycle.guice.LifecycleAction;
 
 public class TestCustomLifecycledProvider
 {

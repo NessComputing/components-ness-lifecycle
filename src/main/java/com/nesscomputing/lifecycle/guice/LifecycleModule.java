@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.likeness.lifecycle.guice;
+package com.nesscomputing.lifecycle.guice;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Scopes;
 import com.google.inject.matcher.Matchers;
-import com.likeness.lifecycle.DefaultLifecycle;
-import com.likeness.lifecycle.Lifecycle;
+import com.nesscomputing.lifecycle.DefaultLifecycle;
+import com.nesscomputing.lifecycle.Lifecycle;
 
 /**
  * Very simple module to allow declarative inclusion of the Lifecycle.

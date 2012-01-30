@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.likeness.lifecycle.guice;
+package com.nesscomputing.lifecycle.guice;
 
 
 import java.util.Map;
@@ -30,12 +30,12 @@ import com.google.inject.Injector;
 import com.google.inject.Module;
 import com.google.inject.Provider;
 import com.google.inject.Scopes;
-import com.likeness.lifecycle.DefaultLifecycle;
-import com.likeness.lifecycle.Lifecycle;
-import com.likeness.lifecycle.LifecycleStage;
-import com.likeness.lifecycle.guice.DelegatingLifecycleProvider;
-import com.likeness.lifecycle.guice.LifecycleAction;
-import com.likeness.lifecycle.guice.LifecycleProvider;
+import com.nesscomputing.lifecycle.DefaultLifecycle;
+import com.nesscomputing.lifecycle.Lifecycle;
+import com.nesscomputing.lifecycle.LifecycleStage;
+import com.nesscomputing.lifecycle.guice.DelegatingLifecycleProvider;
+import com.nesscomputing.lifecycle.guice.LifecycleAction;
+import com.nesscomputing.lifecycle.guice.LifecycleProvider;
 
 public class TestDelegatingLifecycleProvider
 {

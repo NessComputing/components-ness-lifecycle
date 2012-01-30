@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.likeness.lifecycle.guice;
+package com.nesscomputing.lifecycle.guice;
 
 
 import com.google.inject.Provider;
-import com.likeness.lifecycle.LifecycleStage;
+import com.nesscomputing.lifecycle.LifecycleStage;
 
 /**
  * Describes a guice provider that support lifecycle actions.

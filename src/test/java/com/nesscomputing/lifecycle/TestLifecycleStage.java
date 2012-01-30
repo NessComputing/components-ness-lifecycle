@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.likeness.lifecycle;
+package com.nesscomputing.lifecycle;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
@@ -21,7 +21,7 @@ import static org.hamcrest.CoreMatchers.not;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.likeness.lifecycle.LifecycleStage;
+import com.nesscomputing.lifecycle.LifecycleStage;
 
 public class TestLifecycleStage
 {

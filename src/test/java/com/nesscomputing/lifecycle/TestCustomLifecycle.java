@@ -13,16 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.likeness.lifecycle;
+package com.nesscomputing.lifecycle;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.likeness.lifecycle.AbstractLifecycle;
-import com.likeness.lifecycle.Lifecycle;
-import com.likeness.lifecycle.LifecycleDriver;
-import com.likeness.lifecycle.LifecycleListener;
-import com.likeness.lifecycle.LifecycleStage;
+import com.nesscomputing.lifecycle.AbstractLifecycle;
+import com.nesscomputing.lifecycle.Lifecycle;
+import com.nesscomputing.lifecycle.LifecycleDriver;
+import com.nesscomputing.lifecycle.LifecycleListener;
+import com.nesscomputing.lifecycle.LifecycleStage;
 
 
 public class TestCustomLifecycle

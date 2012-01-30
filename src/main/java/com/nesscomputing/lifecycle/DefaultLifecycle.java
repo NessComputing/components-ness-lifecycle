@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.likeness.lifecycle;
+package com.nesscomputing.lifecycle;
 
 /**
- * ServiceDiscovery lifecycle, similar to the default lifecycle, also add Announce and Unannounce.
+ * Default lifecycle with three stages: CONFIGURE, START and STOP.
  */
-public class ServiceDiscoveryLifecycle extends AbstractLifecycle implements Lifecycle
+public class DefaultLifecycle extends AbstractLifecycle implements Lifecycle
 {
-    public ServiceDiscoveryLifecycle()
+    public DefaultLifecycle()
     {
         this(false);
     }
 
-    public ServiceDiscoveryLifecycle(final boolean verbose)
+    public DefaultLifecycle(final boolean verbose)
     {
-        super(new LifecycleDriver(LifecycleStage.CONFIGURE_STAGE, LifecycleStage.START_STAGE, LifecycleStage.ANNOUNCE_STAGE, LifecycleStage.UNANNOUNCE_STAGE, LifecycleStage.STOP_STAGE), verbose);
+        super(new LifecycleDriver(LifecycleStage.CONFIGURE_STAGE, LifecycleStage.START_STAGE, LifecycleStage.STOP_STAGE), verbose);
     }
 
     /**
