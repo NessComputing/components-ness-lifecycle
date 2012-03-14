@@ -17,12 +17,12 @@ import com.nesscomputing.lifecycle.guice.AbstractLifecycleModule;
  */
 public final class LifecycleStatement implements TestRule
 {
-    public static final LifecycleStatement defaultLifecycle()
+    public static LifecycleStatement defaultLifecycle()
     {
         return new LifecycleStatement(new DefaultLifecycle(), LifecycleStage.START_STAGE, LifecycleStage.STOP_STAGE);
     }
 
-    public static final LifecycleStatement serviceDiscoveryLifecycle()
+    public static LifecycleStatement serviceDiscoveryLifecycle()
     {
         return new LifecycleStatement(new DefaultLifecycle(), LifecycleStage.ANNOUNCE_STAGE, LifecycleStage.STOP_STAGE);
     }
