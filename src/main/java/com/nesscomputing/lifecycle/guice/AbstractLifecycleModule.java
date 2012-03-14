@@ -15,30 +15,26 @@
  */
 package com.nesscomputing.lifecycle.guice;
 
-import com.google.inject.Scopes;
-import com.nesscomputing.lifecycle.DefaultLifecycle;
-import com.nesscomputing.lifecycle.Lifecycle;
+import com.google.inject.AbstractModule;
+import com.google.inject.matcher.Matchers;
 
 /**
  * Very simple module to allow declarative inclusion of the Lifecycle.
  */
-public final class LifecycleModule extends AbstractLifecycleModule
+public abstract class AbstractLifecycleModule extends AbstractModule
 {
-    private final Class<? extends Lifecycle> lifecycleClass;
-
-    public LifecycleModule()
-    {
-        this(DefaultLifecycle.class);
-    }
-
-    public LifecycleModule(final Class<? extends Lifecycle> lifecycleClass)
-    {
-        this.lifecycleClass = lifecycleClass;
-    }
-
     @Override
-    protected void configureLifecycle()
+    public void configure()
     {
-        bind(Lifecycle.class).to(lifecycleClass).in(Scopes.SINGLETON);
+        configureLifecycle();
+
+        LifecycleAnnotationFinder finder = new LifecycleAnnotationFinder();
+
+        // Enable @OnStage lifecycle declarations
+        bind (LifecycleAnnotationFinder.class).toInstance(finder);
+        bind (LifecycleAnnotationWirer.class).asEagerSingleton();
+        binder().bindListener(Matchers.any(), finder);
     }
+
+    protected abstract void configureLifecycle();
 }
