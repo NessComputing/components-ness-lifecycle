@@ -25,11 +25,13 @@ import com.nesscomputing.lifecycle.DefaultLifecycle;
 import com.nesscomputing.lifecycle.Lifecycle;
 import com.nesscomputing.lifecycle.LifecycleStage;
 import com.nesscomputing.lifecycle.guice.AbstractLifecycleModule;
+import com.nesscomputing.testing.lessio.AllowAll;
 
 /**
  * Test rule to run lifecycle start and stop for unit tests. Unfortunately, this must be run around a method (after \#0064Before and before \#0064After annotations), so
  * it can only be used in conjunction with the {@link LifecycleRunner}.
  */
+@AllowAll
 public final class LifecycleStatement implements TestRule
 {
     public static LifecycleStatement defaultLifecycle()
