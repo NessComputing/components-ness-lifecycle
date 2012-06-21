@@ -24,6 +24,7 @@ import com.google.inject.Module;
 import com.nesscomputing.lifecycle.DefaultLifecycle;
 import com.nesscomputing.lifecycle.Lifecycle;
 import com.nesscomputing.lifecycle.LifecycleStage;
+import com.nesscomputing.lifecycle.ServiceDiscoveryLifecycle;
 import com.nesscomputing.lifecycle.guice.AbstractLifecycleModule;
 import com.nesscomputing.testing.lessio.AllowAll;
 
@@ -41,7 +42,7 @@ public final class LifecycleStatement implements TestRule
 
     public static LifecycleStatement serviceDiscoveryLifecycle()
     {
-        return new LifecycleStatement(new DefaultLifecycle(), LifecycleStage.ANNOUNCE_STAGE, LifecycleStage.STOP_STAGE);
+        return new LifecycleStatement(new ServiceDiscoveryLifecycle(), LifecycleStage.ANNOUNCE_STAGE, LifecycleStage.STOP_STAGE);
     }
 
     private final Lifecycle lifecycle;
