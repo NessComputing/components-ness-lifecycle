@@ -131,6 +131,8 @@ class LifecycleAnnotationFinder implements TypeListener {
             this.stage = stage;
             this.object = object;
             this.method = method;
+
+            Preconditions.checkState(method.getParameterTypes().length == 0, "Method '%s' must have no arguments to be a @OnStage method", method);
         }
 
         void visit(Lifecycle lifecycle) {
