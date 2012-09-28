@@ -18,6 +18,7 @@ package com.nesscomputing.lifecycle.junit;
 import java.util.List;
 
 import org.junit.internal.runners.statements.InvokeMethod;
+import org.junit.internal.runners.statements.RunBefores;
 import org.junit.rules.RunRules;
 import org.junit.rules.TestRule;
 import org.junit.runners.BlockJUnit4ClassRunner;
@@ -35,10 +36,22 @@ public class LifecycleRunner extends BlockJUnit4ClassRunner
         super(klass);
     }
 
-    private Statement withLifeycleRules(final FrameworkMethod method, final Object target, final Statement statement)
+    private Statement withLifecycleRules(final FrameworkMethod method, final Object target, final Statement statement)
     {
         List<TestRule> testRules = getLifecycleRules(target);
         return testRules.isEmpty() ? statement : new RunRules(statement, testRules, describeChild(method));
+    }
+
+    private Statement withLifecycleBefore(final FrameworkMethod method, final Object target, final Statement statement)
+    {
+        List<FrameworkMethod> methods = getTestClass().getAnnotatedMethods(LifecycleBefore.class);
+        return methods.isEmpty() ? statement : new RunBefores(statement, methods, target);
+    }
+
+    private Statement withLifecycleAfter(final FrameworkMethod method, final Object target, final Statement statement)
+    {
+        List<FrameworkMethod> methods = getTestClass().getAnnotatedMethods(LifecycleAfter.class);
+        return methods.isEmpty() ? statement : new RunBefores(statement, methods, target);
     }
 
     protected List<TestRule> getLifecycleRules(final Object target)
@@ -49,6 +62,10 @@ public class LifecycleRunner extends BlockJUnit4ClassRunner
     @Override
     protected Statement methodInvoker(final FrameworkMethod method, final Object test)
     {
-        return withLifeycleRules(method, test, new InvokeMethod(method, test));
+        Statement s = new InvokeMethod(method, test);
+        s = withLifecycleBefore(method, test, s);
+        s = withLifecycleAfter(method, test, s);
+        s = withLifecycleRules(method, test, s);
+        return s;
     }
 }
