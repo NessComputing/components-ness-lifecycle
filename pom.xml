@@ -13,12 +13,13 @@
     <connection>scm:git:git://github.com/NessComputing/components-ness-lifecycle.git</connection>
     <developerConnection>scm:git:git@github.com:NessComputing/components-ness-lifecycle.git</developerConnection>
     <url>http://github.com/NessComputing/components-ness-lifecycle</url>
+    <tag>ness-lifecycle-1.3.0</tag>
   </scm>
 
   <groupId>com.nesscomputing.components</groupId>
   <artifactId>ness-lifecycle</artifactId>
   <name>ness-lifecycle</name>
-  <version>1.3.0-SNAPSHOT</version>
+  <version>1.3.0</version>
   <packaging>jar</packaging>
   <description>Guice based lifecycle.</description>
 
