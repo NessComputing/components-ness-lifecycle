@@ -26,6 +26,18 @@
   <dependencies>
     <dependency>
       <groupId>com.nesscomputing.components</groupId>
+      <artifactId>ness-config</artifactId>
+      <version>2.2.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.nesscomputing.components</groupId>
+      <artifactId>ness-scopes</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.nesscomputing.components</groupId>
       <artifactId>ness-logging</artifactId>
       <version>1.1.1</version>
     </dependency>
@@ -35,10 +47,26 @@
       <artifactId>guava</artifactId>
     </dependency>
 
-    <!-- Java APIs -->
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.skife.config</groupId>
+      <artifactId>config-magic</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.weakref</groupId>
+      <artifactId>jmxutils</artifactId>
+      <version>1.12</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.mogwee</groupId>
+      <artifactId>mogwee-executors</artifactId>
+      <version>1.2.0</version>
     </dependency>
 
     <dependency>
@@ -49,6 +77,11 @@
     <dependency>
       <groupId>com.google.inject</groupId>
       <artifactId>guice</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.google.inject.extensions</groupId>
+      <artifactId>guice-multibindings</artifactId>
+      <scope>runtime</scope>
     </dependency>
 
     <dependency>
