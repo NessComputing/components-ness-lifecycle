@@ -24,7 +24,7 @@ import com.google.inject.Provider;
 /**
  * Augments an existing provider or provider class with the Lifecycle.
  */
-public class DelegatingLifecycleProvider<T> extends AbstractLifecycleProvider<T>
+public final class DelegatingLifecycleProvider<T> extends AbstractLifecycleProvider<T>
 {
     private final Class<? extends Provider<T>> providerClass;
 
@@ -34,7 +34,7 @@ public class DelegatingLifecycleProvider<T> extends AbstractLifecycleProvider<T>
      * Returns a LifecycleProvider that delegates to an existing provider. The provider is managed by Guice
      * and injected.
      */
-    public static final <U> LifecycleProvider<U> of(@Nonnull final Class<? extends Provider<U>> providerClass)
+    public static <U> LifecycleProvider<U> of(@Nonnull final Class<? extends Provider<U>> providerClass)
     {
         return new DelegatingLifecycleProvider<U>(providerClass, null);
     }
@@ -42,7 +42,7 @@ public class DelegatingLifecycleProvider<T> extends AbstractLifecycleProvider<T>
     /**
      * Returns a LifecycleProvider that delegates to an existing provider instance.
      */
-    public static final <U> LifecycleProvider<U> of(@Nonnull final Provider<U> delegate)
+    public static <U> LifecycleProvider<U> of(@Nonnull final Provider<U> delegate)
     {
         return new DelegatingLifecycleProvider<U>(null, delegate);
     }

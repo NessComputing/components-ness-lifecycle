@@ -44,14 +44,14 @@ public class LifecycleDriver implements LifecycleListener
      */
     public LifecycleDriver(@Nonnull final LifecycleStage ...stages)
     {
-    	for (LifecycleStage stage : stages) {
-    		if (lifecycleStages.size() > 0) {
-    			stageMap.put(lifecycleStages.getLast(), stage);
-    		}
+        for (LifecycleStage stage : stages) {
+            if (!lifecycleStages.isEmpty()) {
+                stageMap.put(lifecycleStages.getLast(), stage);
+            }
 
-    		stageMap.put(stage, null);
-    		lifecycleStages.add(stage);
-    	}
+            stageMap.put(stage, null);
+            lifecycleStages.add(stage);
+        }
 
         nextStage = lifecycleStages.getFirst();
     }
@@ -90,15 +90,15 @@ public class LifecycleDriver implements LifecycleListener
 
         for (Iterator<LifecycleStage> it = lifecycleStages.iterator(); it.hasNext(); ) {
             LifecycleStage le = it.next();
-            boolean ne = nextStage != null && le.equals(nextStage);
+            boolean ne = le.equals(nextStage);
             if (ne) {
-                sb.append("*");
+                sb.append('*');
             }
 
             sb.append(le.getName());
 
             if (ne) {
-                sb.append("*");
+                sb.append('*');
             }
 
             if (it.hasNext()) {
