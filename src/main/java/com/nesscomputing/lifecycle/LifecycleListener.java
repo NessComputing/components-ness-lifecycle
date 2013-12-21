@@ -20,9 +20,9 @@ package com.nesscomputing.lifecycle;
  */
 public interface LifecycleListener
 {
-	/**
-	 * Called when a stage is hit.
-	 * @param lifecycleStage A LifecycleStage object representing the stage that was hit.
-	 */
+    /**
+     * Called when a stage is hit.
+     * @param lifecycleStage A LifecycleStage object representing the stage that was hit.
+     */
     void onStage(final LifecycleStage lifecycleStage);
 }
