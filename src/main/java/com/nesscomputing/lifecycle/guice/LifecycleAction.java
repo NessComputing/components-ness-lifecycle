@@ -16,13 +16,13 @@
 package com.nesscomputing.lifecycle.guice;
 
 /**
- * Provides a callback to perform an action on a given object. This is 
+ * Provides a callback to perform an action on a given object. This is
  * necessary to hook the LifecycledProvider up using a specific instance of an object.
  */
 public interface LifecycleAction<T>
 {
     /**
-     * Perform an arbitrary action on the object passed in. 
+     * Perform an arbitrary action on the object passed in.
      */
     void performAction(T obj);
 }

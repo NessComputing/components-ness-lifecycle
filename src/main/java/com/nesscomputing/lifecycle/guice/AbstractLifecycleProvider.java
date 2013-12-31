@@ -24,7 +24,6 @@ import javax.annotation.Nonnull;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import com.google.inject.Inject;
-import com.google.inject.Provider;
 import com.nesscomputing.lifecycle.Lifecycle;
 import com.nesscomputing.lifecycle.LifecycleListener;
 import com.nesscomputing.lifecycle.LifecycleStage;
@@ -47,7 +46,7 @@ public abstract class AbstractLifecycleProvider<T> implements LifecycleProvider<
     @Override
     public void addAction(final LifecycleStage stage, final LifecycleAction<T> action)
     {
-    	stageEvents.add(new StageEvent(stage, action));
+        stageEvents.add(new StageEvent(stage, action));
     }
 
     /**
@@ -91,25 +90,25 @@ public abstract class AbstractLifecycleProvider<T> implements LifecycleProvider<
         }
 
         private LifecycleStage getLifecycleStage()
-		{
-			return stage;
-		}
+        {
+            return stage;
+        }
 
         private LifecycleAction<T> getLifecycleAction()
-		{
-			return action;
-		}
+        {
+            return action;
+        }
 
-		private transient String toString;
+        private transient String toString;
 
-		@Override
-		public String toString() {
-			if (toString == null) {
-				toString = new ToStringBuilder(this).append("stage", stage)
-						.append("action", action).toString();
-			}
-			return toString;
-		}
+        @Override
+        public String toString() {
+            if (toString == null) {
+                toString = new ToStringBuilder(this).append("stage", stage)
+                        .append("action", action).toString();
+            }
+            return toString;
+        }
     }
 
     /**

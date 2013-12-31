@@ -21,9 +21,6 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import com.google.inject.Singleton;
-import com.nesscomputing.lifecycle.Lifecycle;
-
 /**
  * Annotate a method to be hooked up to a certain lifecycle stage.
  * The annotated method will be invoked as if it were added as a listener via the normal {@link Lifecycle#addListener}.
