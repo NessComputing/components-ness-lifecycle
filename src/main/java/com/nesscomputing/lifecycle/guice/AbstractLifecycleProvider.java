@@ -52,7 +52,7 @@ public abstract class AbstractLifecycleProvider<T> implements LifecycleProvider<
     /**
      * Called by Guice. Don't touch.
      */
-    @Inject(optional=true)
+    @Inject
     public final void setLifecycle(final Lifecycle lifecycle)
     {
         this.lifecycle = lifecycle;
